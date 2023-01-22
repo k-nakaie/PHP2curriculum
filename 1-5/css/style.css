@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: auto;
+}
+
+.clearfix::after { 
+    content: '';
+    display: block; 
+    clear: both;
+}
+
+.head {
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    background-color: #141f40;
+    top: 0;
+    left: 0;
+}
+
+.center {
+    
+    margin-top: 100px;
+}
+.boxs {
+    position: relative;
+    float: right;
+    margin: 20px 20px 20px auto ;
+    width: 160px;
+    height: 60px;
+    background-color: white;
+    /* justify-content: space-between; */
+}
+
+.box {
+    position: relative;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #a9004b;
+}
+
+.left {
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 250px;
+    background-color: #80bfa8;
+}
+
+.right {
+    position: relative;
+    float: left;
+    width: 250px;
+    height: 250px;
+    background-color: #8c2727;
+
+}
+
+.cover-box1 {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    margin-top: 40px;
+    margin-left: 40px;
+
+}
+
+.cover-box2 {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    margin: 5px 60px 5px 40px;
+    
+}
+
+.cover-box3 {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    
+}
+
+
+.orenge-box {
+    float: left;
+    width: 140px;
+    height: 40px;
+    background-color: #ff863f;
+    box-sizing: border-box;
+    margin: 5px; 
+}
+
+footer {
+    width: 400px;
+    height: 100px;
+    background-color: #d98d30;
+}
