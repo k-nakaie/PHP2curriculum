@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: auto;
+}
+
+body {
+    background-color: grey;
+    text-align: center;
+    color: white;
+    font-family: serif;
+    margin-top: 5px;
+}
+
+.kekka {
+    margin-top: 10px;
+}
+

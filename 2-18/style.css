@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: auto;
+}
+
+body {
+    background-color: grey;
+    text-align: center;
+    color: white;
+    font-family: serif;
+
+}
+
+
+header {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    border-bottom: solid 1px white;
+}
+
+h1 {
+    font-size: medium;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+input {
+    background-color: white;
+} 
+
+.bottun {
+    border-radius: 5px;
+}

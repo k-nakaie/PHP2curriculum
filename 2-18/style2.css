@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: auto;
+}
+
+body {
+    background-color: grey;
+    text-align: center;
+    color: white;
+    font-family: serif;
+
+}
+
+h2 {
+    margin: 10px auto;
+}
+
+.otukare {
+    margin-top: 50px;
+}
+
+.a_botton {
+    border-radius: 5px;
+}
