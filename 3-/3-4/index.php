@@ -8,7 +8,17 @@ $post_data = $data->getPostData();
 //取得できているかの確認
 // var_dump($users_data);
 
-// printf('最終ログイン日：%d',$users_data["last_login"]);
+//カテゴリを変換するためのメソッド
+function change_category($category){
+    if($category === "1"){
+        echo "食事";
+    }elseif($category === "2"){
+        echo "旅行";
+    }else{
+        echo "その他";
+    }
+}
+
 ?>
 
 
@@ -60,7 +70,7 @@ $post_data = $data->getPostData();
                     
                     <td><?php echo $row['id'];?></td>
                     <td><?php echo $row['title'];?></td>
-                    <td><?php echo $row['category_no'];?></td>
+                    <td><?php change_category($row['category_no']);?></td>
                     <td><?php echo $row['comment'];?></td>
                     <td><?php echo $row['created'];?></td>
                 </tr>
