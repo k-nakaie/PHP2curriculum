@@ -47,13 +47,13 @@ function change_category($category){
                     <p class="p1"><?php printf('ようこそ %s%s さん',$users_data["last_name"],$users_data["first_name"]) ; ?></p>
                 </div>
                 <div class="right-down">
-                    <p><?php echo "最終ログイン日：".$users_data["last_login"]; ?></p>
+                    <p class="p1"><?php echo "最終ログイン日：".$users_data["last_login"]; ?></p>
                 </div>
             </div>
         </div>
     </header>
-    <main>
-        <table>
+    <main class="main">
+        <table class="table">
             <thead>
                 <tr>
                    <th>記事ID</th>
@@ -67,7 +67,6 @@ function change_category($category){
                 <!-- phpでDBからの取得をループで書き込む -->
                 <?php foreach($post_data as $row){?>
                 <tr>
-                    
                     <td><?php echo $row['id'];?></td>
                     <td><?php echo $row['title'];?></td>
                     <td><?php change_category($row['category_no']);?></td>

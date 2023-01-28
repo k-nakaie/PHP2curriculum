@@ -31,6 +31,7 @@
     float: left;
     width: 800px;
     text-align: right;
+    justify-content: center;
 }
 
 .right-up {
@@ -43,16 +44,26 @@
     background-color: #00ffff;
 }
 
-main {
-    margin-top: 150px;
-    width: 1000px;
+.p1 {
+   display: inline-block;
+   text-align: center;
+   line-height: 60px;
 }
 
-table {
+.main {
+    margin-top: 140px;
+    width: 1000px;
+    /* padding: 10px auto;     */
+    display: flex;
+}
+
+.table {
     position: relative;
     text-align: center;
     margin: 10px auto;
     width: 80%;
+
+    
 }
 
 thead {
