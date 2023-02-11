@@ -1,0 +1,776 @@
+
+/* 共通設定 */
+/* 両サイドに余白があったので全体にmargin設定 */
+* {
+    margin: 0;
+    padding: auto;
+    /* 全体のフォント変えたければ設定 */
+    /* font-family: serif; */
+    /* 細字が日本語対応できないみたいでした */
+    font-weight: normal;
+}
+
+/* 全体の横幅設定とフォント統一 */
+.wrapper {
+    width: 1280px;
+    font-family: "YuGothic";
+    font-weight: 500;
+}
+
+/* フロート解除用 */
+.clearfix::after { 
+    content: '';
+    display: block; 
+    clear: both;
+}
+/* 自動スクロール対応 */
+html {
+    /* ブラウザによっては機能しない */
+    scroll-behavior: smooth;
+}
+
+/* 背景画像ありのセクション */
+.back {
+    width: 100%;
+    margin: 0;
+}
+
+/* スマホ画面で改行する準備 */
+.sp_br {
+    display: none;
+}
+
+/* 全体の文字調整 */
+p {
+    font-size: 120%;
+}
+/* ----------------------------------- */
+/* みだし一覧 */
+
+/* header toptext,  */
+h1 {
+    font-size: 200%;
+    text-align: center;
+}
+
+/* conerクラスのh1・h2のセット使用 */
+.coner h1 {
+    font-size: 500%;
+}
+
+/* .textarea2 review */
+.reviews h1 {
+    text-align: left;
+}
+
+/* conerクラスのh1・h2のセット使用 */
+h2 {
+    font-size: 120%;
+    width: 30%;
+    text-align: center;
+    letter-spacing: 2em;
+}
+
+/* 文字感覚調整 */
+.coner_faq h2 {
+    letter-spacing: 0.5em;
+}
+
+/* .about testarea_1, */
+h3 {
+    margin: 0 auto 20px;
+    font-size: 250%;
+    text-align: center;
+}
+
+/* .faq qaset */
+.qaset h3 {
+    background-color: #eee;
+    margin: 0;
+    padding-left: 10px;
+    text-align: left;
+    box-sizing: border-box;
+    font-size: 200%;
+}
+
+/* .footer company */
+.company h3 {
+    text-align: left;
+    margin: 0 0 20px;
+    font-size: 200%;
+
+}
+/* .four, 選ばれる４つの理由 */
+h4 {
+    font-size: 400%;
+    text-align: center;
+    margin: 0 20px;
+    text-align-last: justify; 
+}
+
+/* .four harf */
+h6 {
+    font-size: 180%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* coner系：大文字と小文字の上下セットみだし */
+.coner {
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.coner_h2 {
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+}
+
+
+
+
+
+
+/* -------------------------------- */
+/* ヘッダー部分 */
+.head {
+    display: flex;
+    /* width: 100%; */
+    height: 100px;
+    /* デバッグ用で色付け */
+    /* background-color: aquamarine; */
+    justify-content: space-between;
+    margin: 0 5%;
+}
+
+/* 親要素に対して相対的な大きさ設定 */
+.rogo {
+    width: 15%;
+    margin-left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+/* ヘッダーメニューの設定 */
+.head ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin-right: 0;
+    width: 60%;
+}
+
+/* ヘッドクラスのaタグ設定 */
+.head a {
+    text-decoration: none;
+    color: black;
+    /* ホバー時のアクション追加のため設定 */
+    position: relative;
+}
+
+/* ホバー時のaタグアクションの下準備 */
+.head a::after {
+    position: absolute;
+    content: '';
+    width: 0%;
+    left: 0;
+    bottom: -8px;
+    height: 3px;
+    transition: .3s;
+    background: #ddd
+    ;
+}
+/* ホバー時のaタグアクション */
+.head a:hover::after {
+    width: 100%;
+
+}
+
+/* リスト要素の感覚調整 */
+.head ul li {
+    margin-left: 20px;
+}
+
+/* -------------------------------- */
+/* ここからメイン */
+
+/* メインロゴ */
+/* 幅変更にも対応しやすいように％で大きさ設定 */
+.main_rogo {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* 冒頭コメント。横幅％指定と中央揃え */
+.toptext {
+    width: 90%;
+    text-align: center;
+    margin: 40px 5% 0;
+
+}
+
+
+/* ここだけ強調 */
+.b-blow {
+    font-weight: bold;
+    font-size: 130%;
+    font-family: serif;
+}
+
+/* 行間を調整。間に2文字分が入る */
+.toptext p {
+    line-height: 300%;
+    width: 100%;
+    margin: 0;
+}
+
+/* ----------------------------------
+ABOUT */
+
+/* 背景に画像を設定するための土台部分 */
+.box {
+    position: relative;
+    margin: 0;
+    /* 小要素のabsolute分高さ調整 */
+    height: 1650px;
+    width: 100%;
+}
+
+/* 背景画像を固定する */
+.back_img1 {
+    position: absolute;
+    width: 100%;
+    
+}
+/* レスポンシブ用 */
+.back_img2 {
+    display: none;
+}
+
+/* レスポンシブ用 */
+.back_img3 {
+    display: none;
+}
+
+/* 背景の上に重なるように入力欄の要素作成 */
+.textarea {
+    position:absolute;
+    text-align: center;
+    top: 50px;
+    align-items: center;
+    margin: 200px 5% auto;
+    width: 90%;
+}
+
+/* 見だし・左テキスト右画像のセット */
+.textarea_1 {
+    margin-bottom: 30px;
+}
+
+.textarea_1_1 {
+    position: relative;
+    display: flex;
+}
+
+
+.area1_p {
+    width: 55%;
+    line-height: 300%;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.img_samp {
+    position: absolute;
+    left: 55%;
+    display: block;
+    width: 45%;
+}
+
+.area1_p2 {
+    width: 50%;
+    line-height: 300%;
+    margin: 60px 0 20px;
+    text-align: left;
+}
+
+/* ------------------------ */
+/* .b-blowが選ばれる４つの理由 */
+
+/* ４つの理由部分の枠 */
+.four {
+    margin: 250px 5% 0;
+    width: 90%;
+}
+
+.four_blow {
+    font-size: 130%;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.span_4 {
+    font-size: 130%;
+}
+
+
+.pair {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.harf {
+    position: relative;
+    width: 48%;
+}
+
+/* 要件通りの上下調整できませんでした。 */
+.title {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+
+.point {
+    float: left;
+    position: absolute;
+    top: 50% ;
+    left: 0;
+    font-size: 250%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.num {
+    margin-right: 10px;
+    margin-left: 10px;
+    /* スラッシュゼロ対応。はみ出てしまいました・・ */
+    font-variant-numeric: tabular-nums;
+    font-variant-numeric: slashed-zero;
+}
+
+.reason {
+    text-align: center;
+}
+
+.icon_base {
+    float: right;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    align-items: center;
+    text-align: right;
+}
+
+.icon {
+    position: relative;
+    padding-right: 25%;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+.kutu {
+    top: 25%;
+    position: relative;
+    padding-right: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 8%;
+
+}
+
+.reason_text {
+    text-align: left;
+    line-height: 300%;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    height: 200px;
+}
+
+.survey {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.img_per {
+    margin: auto;
+    width: 100%;
+}
+
+.h6_under {
+    position: absolute;
+    /* top: 100px; */
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+
+/* --------------------------------- */
+/* CUSTOMER REVIEWS */
+
+/* レスポンシブ用 */
+.back_img4 {
+    display: none;
+}
+
+/* 背景に画像を設定するための土台部分 */
+.box2 {
+    position: relative;
+    margin: 0;
+    /* 小要素のabsolute分高さ調整 */
+    height: 1650px;
+    width: 100%;
+}
+
+/* 要素を入れるエリア */
+.textarea2 {
+    position:absolute;
+    text-align: center;
+    align-items: center;
+    margin: 280px 5% auto;
+    width: 90%;
+}
+ 
+.reviews {
+    padding-top: 70px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    padding-bottom: 30px;
+}
+
+.review {
+    position: absolute;
+    left: 0;
+    width: 60%;
+    z-index: 200;
+    /* display: inline-block; */
+}
+
+/* ４つ目だけ比率変更 */
+.review_4 {
+    position: absolute;
+    left: 0;
+    width:70%;
+    z-index: 200;
+}
+
+.reviews p {
+    text-align: left;
+    line-height: 250%;
+    /* font-size: 120%; */
+}
+
+.img_rev {
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    width: 60%;
+}
+/* ---------------------------- */
+
+/* PRODUCTS */
+
+.products {
+    margin-top: 550px;
+    /* height: 100px; */
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.goods {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.goods_harf {
+    width: 43%;
+}
+
+.goods_det {
+    height: 400px;
+}
+.img_goods {
+    width: 100%;
+}
+
+.goods_b {
+    margin: 0 30px 0 auto;
+    font-size: 130%;
+}
+.kakaku {
+    text-align: center;
+    /* 小要素を親からはみ出させる */
+    margin: 0 calc(50% - 50vw) 20px;
+    width: 100vw;
+}
+
+.goods p {
+    line-height: 200%;
+}
+
+.online {
+    margin-top: 30px;
+    text-align: center;
+    border: solid 1px black;
+    height: 80px;
+    width: 100%;
+    line-height: 80px;
+    font-size: 200%;
+}
+
+.online a:hover {
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+/* .teiki {
+    margin-top: 30px;
+    margin-bottom: 100px;
+    text-align: center;
+    border: solid 1px black;
+    height: 80px;
+    width: 100%;
+    line-height: 80px;
+    font-size: 250%;
+    list-style: none;
+    text-decoration: none;
+} */
+/* 
+.teiki:hover {
+    background-color: black;
+    color: yellow;
+    transition: 1s;
+} */
+
+.products a {
+    text-decoration: none;
+    color: black;
+    display: block;
+} 
+
+/* .teiki a:hover {
+    background-color: black;
+    color: yellow;
+    transition: 1s;
+}  */
+
+/* -------------------------------
+定期購入フォーム */
+
+/* 背景に画像を設定するための土台部分 */
+.box3 {
+    position: relative;
+    margin: 0;
+    /* 小要素のabsolute分高さ調整 */
+    height: 1910px;
+    width: 100%;
+}
+
+/* 背景画像を固定する */
+.back_img5 {
+    position: absolute;
+    width: 100%;
+    
+}
+
+.back_img6 {
+    display: none;
+}
+.teiki_form {
+    width: 90%;
+    margin: 0 5%;
+    top: 400px;
+    position: absolute;
+}
+
+.text {
+    margin-top: 50px;
+    font-size: 200%;
+}
+
+.teiki_form h1 {
+    font-size: 300%;
+}
+/* 
+.teiki_form p {
+    font-size: 200%;
+}
+ */
+.tag1 {
+    width: 60%;
+    font-size: 140%;
+    
+}
+
+.tag2 {
+    width: 80%;
+    font-size: 140%;
+
+}
+
+.tag3 {
+    width: 30%;
+    font-size: 140%;
+
+}
+/* -----------------------------
+FAQ */
+
+.faq {
+    width: 90%;
+    margin: 30px 5%;
+}
+
+.coner_faq {
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.faq_h1 {
+    font-size: 200%;
+}
+
+.coner_h2 {
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+}
+.qaset {
+    margin-bottom: 40px;
+}
+
+.qaset p {
+    line-height: 200%;
+}
+/* ------------------------------
+news */
+
+.news {
+    margin: 200px 10%;
+    width: 80%;
+}
+
+.news_row1 {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+} 
+
+
+.news a {
+    width: 18%;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+/* 少し浮いて色が薄くなる */
+.news a:hover {
+    transform: translateY(-2px);
+    opacity: 0.7;
+}
+
+.img_news {
+    width: 80%;
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* --------------------------------
+フッター */
+
+.footer {
+    /* width: 90%;
+    margin: 20px 50px; */
+    background-color: #eee;
+    display: flex;
+    position: relative;
+}
+
+.company {
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-bottom: 20px;
+}
+
+.company_0 {
+    margin-right: 30px;
+}
+
+.company p {
+    line-height: 200%;
+}
+
+.sns_0 {
+    position: absolute;
+    right: 5%;
+    bottom: 20px;
+    display: flex;
+}
+
+.sns1 {
+    display: flex;
+    margin-right: 10px;
+    background-color: #1DA1F2;
+    border-radius: 10px;
+    color: white;
+    border: solid 1px #1DA1F2;
+    /* align-items: center;    */
+    font-size: 150%;
+}
+
+/* 少し浮いて色が薄くなる */
+.sns1:hover {
+    transform: translateY(-2px);
+    opacity: 0.7;
+}
+
+.sns_0 a {
+    text-decoration: none;
+}
+
+.sns1 p {
+    margin: 5px 20px 5px 10px;
+}
+
+.sns1 img {
+    margin-left: 10px;
+}
+
+.sns2 {
+    display: flex;
+    background-color: black;
+    border-radius: 10px;
+    color: white; 
+    align-items: center; 
+    border: solid 1px black;
+    font-size: 150%;
+}
+
+.sns2:hover {
+    transform: translateY(-2px);
+    opacity: 0.7;
+}
+
+.sns2 p {
+    margin: 5px 10px;
+}
