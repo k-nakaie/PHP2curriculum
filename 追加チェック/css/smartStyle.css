@@ -1,11 +1,14 @@
-@media screen and (max-width:375px) {
+@media screen and (max-width:768px) {
     
+
+    /* iphone想定(SE) */
     .wrapper {
         width: 375px;
     }
 
+    /* 文字サイズ調整 */
     p {
-        font-size: 70%;
+        font-size: 0.7rem;
     }
 
     /* 改行 */
@@ -17,51 +20,48 @@
     .sp_br_no {
         display: none;
     }
+
+    /* 全体の基本フォントサイズ */
+    html {
+        font-size: 8px;
+    }
     /* -------------------------
     見だし設定 */
-h1 {
-    font-size: 100%;
-}
 
 /* conerクラスのh1・h2のセット使用 */
 .coner h1 {
-    font-size: 200%;
+    font-size: 3rem;
 }
 
 .coner_faq h1 {
-    font-size: 80%;
+    font-size: 2rem;
 }
 
 
 /* conerクラスのh1・h2のセット使用 */
-h2 {
-    font-size: 50%;
+body h2 {
+    font-size: 0.5rem;
 }
 
 /* .about testarea_1, */
-h3 {
+body h3 {
     margin: 0 auto 10px;
-    font-size: 80%;
+    font-size: 1.8rem;
 }
 
-/* .faq qaset */
-.qaset h3 {
-    font-size: 100%;
-}
 
 /* .footer company */
 .company h3 {
-    font-size: 100%;
-
+    font-size: 1.5rem;
 }
 /* .four, 選ばれる４つの理由 */
-h4 {
-    font-size: 180%;
+body h4 {
+    font-size: 3.5rem;
 }
 
 /* .four harf */
-h6 {
-    font-size: 100%;
+body h6 {
+    font-size: 1.8rem;
     padding-top: 10px;
 }
 
@@ -73,21 +73,21 @@ h6 {
     /* -----------------------
     header */
     .head {
-        height: 120px;
+        height: 80px;
     }
     .rogo {
         width: 40%;
     }
 
+
+    /* フレックスはそのままでwrapで折り返させる */
     .head ul {
-        display: block;
-        width: 60%;
-        padding: 0;
+        flex-wrap: wrap;
         text-align: right;
     }
 
     .head ul li {
-        margin: 0;
+        width: 100%;
     }
 
     /* ーーーーーーーーーーーーーーーーーーー
@@ -97,36 +97,22 @@ h6 {
     /* --------------------------
     ABOUT */
 
-    .box {
-        height: 1100px;
-    }
-
-    .back_img2 {
-        display: block;
-        position: absolute;
-        width: 100%;
-        top: 475px;
-    }
-    .back_img3 {
-        display: block;
-        position: absolute;
-        width: 100%;
-        top: 770px;
-    }
-
+    /* margin調整 */
     .textarea {
-        margin: 0  5%;
-        top: 60px;
+        margin: 45% 5% 0;
     }
 
+    /* flex解除して画像をテキストの下側にする */
     .textarea_1_1 {
         display: block;
     }
 
+    /* テキストの幅を変更 */
     .area1_p {
         width: 100%;
     }
 
+    /* 画像の絶対配置を相対に変更 */
     .img_samp {
         position: relative;
         width: 100%;
@@ -144,35 +130,40 @@ h6 {
 /* -------------------------------
 FOUR */
 
-    .pair {
-        display: block;
-        margin-top: 20px;
+    /* 微調整 */
+    .four {
+        margin-top: 40%;
     }
 
+    .pair {
+        margin-top: 10%;
+    }
+
+    /* 横幅を100%にして折り返させる */
     .harf {
         width: 100%;
         margin: 0;
     }
-
-    .title {
-        height: 100px;
-    }
-    /* .point {
-        top: 40%;
-    }
- */
     .icon {
         padding-right: 15%;
     }
 
+    /* 高さ調整 */
     .kutu {
         padding-top: 5%;
     }
 
+    /* 間隔調整 */
     .reason_text {
-        height: 100px;
+        margin-top: 20%;
     }
 
+    /* 間隔調整 */
+    .reason_text::before {
+        padding-bottom: 10%;
+    }
+    
+    /* グラフと重なる見出しの調整 */
     .h6_under {
         margin-top: 40px;
     }
@@ -181,81 +172,74 @@ FOUR */
     /* --------------------------
     CUSTOMER REVIEWS */
 
-    .box2 {
-        height: 1680px;
-    }
-
-
-    .back_img4 {
-        display: block;
-        position: absolute;
-        width: 100%;
-        top: 1025px;
-    }
-
+    /* 高さ調整 */
     .textarea2 {
-        margin-top: 100px;
+        margin-top: 70%;
     }
 
+    /* 高さは中身の要素によって決定する */
     .reviews {
         padding-top: 20px;
         padding-bottom: 0;
         height: auto;
     }
 
-    .review {
-        position: relative;
+    /* 画像の領域設定の解除 */
+    .img_rev {
         width: 100%;
+        shape-outside: none;
     }
 
-    .img_rev {
-        position: relative;
+    /* 4番目の画像の領域設定の解除 */
+    .img_rev4 {
         width: 100%;
+        shape-outside: none;
+
     }
+    
 
     .review_4 {
         position: relative;
         width: 100%;
     }
 
-    /*.reviews P {
-        font-size: 65%;
-    } */
     /* -----------------------
     PROODUCTTS */
 
+    /* 高さ調整 */
     .products {
-        margin-top: 0px;
+        margin-top: 35%;
     }
 
+    /* flex解除 */
     .goods {
         display: block;
     }
-
+    /* 横長の調整と中央配置 */
     .goods_harf {
         width: 80%;
         margin: 0 auto 30px;
-        align-items: center;
     }
 
+
     .goods_det {
-        height: auto;
         margin-bottom: 30px;
     }
 
+    /* 文字が上下中央寄せになるように設定 */
     .online {
-        font-size: 100%;
+        font-size: 1.5rem;
         height: 40px;
         line-height: 40px;
-        margin: 0;
     }
 
-    .teiki {
+    /* 定期配送外部リンクを実装する場合の設定 */
+    /* .teiki {
         font-size: 100%;
         height: 50px;
         line-height: 50px;
         margin: 20px 0 40px;
-    }
+    } */
 
 
 /* -------------------------------
@@ -267,38 +251,34 @@ FOUR */
     height: 650px;
 }
 
-.back_img6 {
-    display: block;
-    position: absolute;
-    width: 100%;
-    top: 100px;
-}
+/* 高さ調整 */
 .teiki_form {
     top: 80px;
 }
 
-
-
+/* formの文字サイズ設定 */
 .text {
     margin-top: 5px;
-    font-size: 120%;
+    font-size: 1.5rem;
 }
-
+/* formの設定 */
 .tag1 {
     width: 90%;
     font-size: 100%;
     
 }
 
+/* formの設定 */
 .tag2 {
     width: 90%;
     font-size: 100%;
 
 }
 
+/* formの設定 */
 .tag3 {
     width: 40%;
-    font-size: 100%;
+    font-size: 150%;
 
 }
 
@@ -316,6 +296,7 @@ FOUR */
     /* --------------------------
     NEWS */
 
+    /* アイコンを縦に５つ並べるようにflex設定 */
     .news {
         margin-top: 30px;
         margin-bottom: 30px;
@@ -323,6 +304,8 @@ FOUR */
 
     }
 
+
+    /* 縦に均等配置 */
     .news_row1 {
         flex-flow: column;
         width: 40%;
@@ -330,11 +313,13 @@ FOUR */
         margin: auto 5%;
     }
 
+    /* 幅調整 */
     .news a {
         width: 100%;
         height: 20%;
     }
 
+    /* 画像のサイズ調整 */
     .img_news {
         width: 100%;
         height: auto;
@@ -364,6 +349,7 @@ FOUR */
         margin-right: 10px;
     }
 
+    /* flex解除 */
     .sns_0 {
         display: block;
         width: 25%;
@@ -371,13 +357,13 @@ FOUR */
 
     .sns1 {
         margin-right: 0;
-        font-size: 120%;
+        font-size: 1.2rem;
         border-radius: 5px;
         margin-bottom: 5px;
     }
 
     .sns2 {
-        font-size: 120%;
+        font-size: 1.2rem;
         border-radius: 5px;
     }
     .sns_0 img {
@@ -392,8 +378,4 @@ FOUR */
         margin-right: 5px;
     }
 
-    .sns_0 a {
-        display: block;
-        width: auto;
-    }
 }   

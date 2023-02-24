@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>b-blow</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/smartStyle.css">
+    <link rel="stylesheet" href="css/smartStyle2.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
 </head>
 <body>
     <div class="wrapper">
@@ -46,8 +48,6 @@
         <section class="back">
                 <div class="box">
                     <img class="back_img1" src="images/長方形　1.png">
-                    <img class="back_img2" src="images/長方形　1.png">
-                    <img class="back_img3" src="images/長方形　1.png">
                     <div class="textarea">
                         <div class="coner">
                             <h1 id="about">ABOUT</h1>
@@ -124,8 +124,6 @@
                             <img src="images/80％.png" class="img_per">
                         </div>
                     </div>
-                </div>
-                <div class="pair">
                     <div class="harf">
                         <div class="title clearfix">
                             <div class="icon_base"><img src="images/ミズ.png" class="icon"></div>
@@ -160,7 +158,7 @@
                         </div>
                         <div class="survey">
                             <h6 class="h6_under">素材が痛むなどトラブルは<br>ありませんでしたか？</h6>
-                            <img src="images/90%.png" class="img_per">
+                            <img src="images/90％.png" class="img_per">
                         </div>
                     </div>
                 </div>
@@ -169,14 +167,12 @@
         <section>
             <div class="box2">
                 <img src="images/長方形　2.png" class="back_img1">
-                <img src="images/長方形　2.png" class="back_img2">
-                <img src="images/長方形　2.png" class="back_img4">
                 <div class="textarea2">
                     <div class="coner">
                         <h1 id="customer">CUSTOMER REVIEWS</h1>
                         <h2 class="coner_h2">お客様の声</h2>
                     </div>
-                    <div class="reviews">
+                    <div class="reviews clearfix">
                         <img src="images/お客様の声　1.png" class="img_rev">
                         <div class="review">
                             <h1>"安心して子供にも使えます！"</h1>
@@ -189,7 +185,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="reviews">
+                    <div class="reviews clearfix">
                         <img src="images/お客様の声　4.png" class="img_rev">
                         <div class="review">
                             <h1>"低刺激だから重宝しています。"</h1>
@@ -200,7 +196,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="reviews">
+                    <div class="reviews clearfix">
                         <img src="images/お客様の声　3.png" class="img_rev">
                         <div class="review">
                             <h1>"アルコールの臭いが苦手な私でも使える！"</h1>
@@ -211,8 +207,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="reviews">
-                        <img src="images/お客様の声　2.png" class="img_rev">
+                    <div class="reviews clearfix">
+                        <img src="images/お客様の声　2.png" class="img_rev4">
                         <div class="review_4">
                             <h1>"持ち運びやすいサイズとデザインです。"</h1>
                             <p>外出するときは、肌身離さず持ち歩いています！<br class="sp_br">電車に乗った後や、<br class="sp_br_no">
@@ -237,8 +233,8 @@
                         <div class="goods_det">
                             <h1><span class="goods_b">b-blow</span>除菌ミストスプレー</h1>
                             <p class="kakaku">希望小売価格　100ml/800円(税抜)300ml/1600円(税抜)</p>
-                            <p>
-                                <ポリヘキサドの特徴><br>
+                            <p class="det">
+                                &lt;ポリヘキサドの特徴&gt;<br>
                                 他の防腐・殺菌剤と比較して多種類の細菌に有効性が高く(抗菌スペクトルが広い)、
                                 低濃度で除菌作用を発揮します。また、酵母やカビ(真菌類)にも効果があり、
                                 さらにアルコールでは除菌できないノロウイルスにも効果が高いことが知られています。
@@ -252,7 +248,7 @@
                         <div class="goods_det">
                             <h1><span class="goods_b">b-blow</span>詰め替え用ボトル</h1>
                             <p class="kakaku">希望小売価格　1000ml/2500円(税抜)</p>
-                            <p>
+                            <p class="det">
                                 手指の除菌以外にも、お子様のおもちゃの除菌や、衣服やカバンなどの布の除菌など、
                                 様々な場面で活躍するb-blowは、一般的な除菌剤より減るスピードが早く、
                                 「気付いたらすぐ無くなってしまう」という声をいただきました。
@@ -270,26 +266,25 @@
         <section>
             <div class="box3">
                 <img class="back_img5" src="images/長方形　1.png">
-                <img class="back_img6" src="images/長方形　1.png">
                 <div class="teiki_form">
-                    <h4 id="online">定期配送申込フォーム</h4>
+                    <h1 id="online">定期配送申込フォーム</h1>
                     <div class="text">
                         <form action="result.php" method="post" class="for">
                             <p>[申込者氏名]</p>
-                            <input type="text" name="name" class="tag1" placeholder="(例)山田　太郎"><br>
+                            <input type="text" name="name" id="namae" class="tag1" placeholder="(例)山田　太郎"><br>
                             <p>[フリガナ]</p>
-                            <input type="text" name="kana" class="tag1" placeholder="(例)ヤマダ　タロウ"><br>
+                            <input type="text" name="kana" id="kana" class="tag1" placeholder="(例)ヤマダ　タロウ"><br>
                             <p>[電話番号]</p>
-                            <input type="text" name="tel" class="tag1" placeholder="(例)0X0XXXXXXXX(ハイフンなし)"><br>
+                            <input type="text" name="tel" id="tel" class="tag1" placeholder="(例)0X0XXXXXXXX(ハイフンなし)"><br>
                             <p>[住所]</p>
                             <p>都道府県</p>
-                            <input type="text" name="prefectures" class="tag1" placeholder="(例)〇〇県"><br>
+                            <input type="text" name="prefectures" id="prefectures" class="tag1" placeholder="(例)〇〇県"><br>
                             <p>市区町村</p>
-                            <input type="text" name="city" class="tag1" placeholder="(例)〇〇市"><br>
+                            <input type="text" name="city" id="city" class="tag1" placeholder="(例)〇〇市"><br>
                             <p>丁・番地</p>
-                            <input type="text" name="town" class="tag2" placeholder="(例)〇〇丁△-◇"><br>
+                            <input type="text" name="town" id="town" class="tag2" placeholder="(例)〇〇丁△-◇"><br>
                             <p>建物名・部屋番号</p>
-                            <input type="text" name="apart" class="tag2" placeholder="(例)YIhouse101"><br>
+                            <input type="text" name="apart" id="apart" class="tag2" placeholder="(例)YIhouse101"><br>
                             <p>[申込期間]</p>
                             <select name="time" id="time" class="tag3">
                                 <option value="0"></option>
@@ -299,18 +294,18 @@
                                 <option value="6">6ヶ月</option>
                                 <option value="12">1年</option>
                             </select><br>
-                            <input type="submit" value="申込内容確認" class="tag3">
+                            <input type="submit" value="申込内容確認" class="tag3" id="send" >
                         </form>
                     </div>
                 </div>
             </div>
         </section>
         <section>
-            <img src="images/スプレー.png" style="width: 90%; margin: 30px 5%;">
-        <section>
+            <img src="images/スプレー.png" style="width: 90%; margin: 30% 5% 0;">
+        <section id="faq">
             <div class="faq">
                 <div class="coner_faq">
-                    <h1 id="faq"><span class="faq_h1">F</span>REQUENTLY<span class="faq_h1">A</span>SKED<span class="faq_h1">Q</span>UESTIONS</h1>
+                    <h1><span class="faq_h1">F</span>REQUENTLY<span class="faq_h1">A</span>SKED<span class="faq_h1">Q</span>UESTIONS</h1>
                     <h2 class="coner_h2">よくある質問</h2>
                 </div>
                 <div class="qa">
@@ -407,5 +402,6 @@
             </div>
         </footer>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>

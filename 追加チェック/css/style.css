@@ -1,20 +1,11 @@
 
 /* 共通設定 */
-/* 両サイドに余白があったので全体にmargin設定 */
-* {
-    margin: 0;
-    padding: auto;
-    /* 全体のフォント変えたければ設定 */
-    /* font-family: serif; */
-    /* 細字が日本語対応できないみたいでした */
-    font-weight: normal;
-}
 
 /* 全体の横幅設定とフォント統一 */
 .wrapper {
-    width: 1280px;
-    font-family: "YuGothic";
-    font-weight: 500;
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 /* フロート解除用 */
@@ -42,30 +33,42 @@ html {
 
 /* 全体の文字調整 */
 p {
-    font-size: 120%;
+    font-size: 1.2rem;
 }
+
+html {
+    font-size: 14px;
+} 
+
 /* ----------------------------------- */
 /* みだし一覧 */
 
 /* header toptext,  */
-h1 {
-    font-size: 200%;
+body h1 {
+    font-size: 2.5rem;
     text-align: center;
 }
 
 /* conerクラスのh1・h2のセット使用 */
 .coner h1 {
-    font-size: 500%;
+    font-size: 5rem;
 }
 
 /* .textarea2 review */
 .reviews h1 {
     text-align: left;
+    font-size: 2rem;
+}
+
+/* goods_detのh1 */
+.goods_det h1 {
+    font-size: 1.8rem;
+    margin: 0 5%;
 }
 
 /* conerクラスのh1・h2のセット使用 */
-h2 {
-    font-size: 120%;
+body h2 {
+    font-size: 1.2rem;
     width: 30%;
     text-align: center;
     letter-spacing: 2em;
@@ -77,9 +80,9 @@ h2 {
 }
 
 /* .about testarea_1, */
-h3 {
+body h3 {
     margin: 0 auto 20px;
-    font-size: 250%;
+    font-size: 2.5rem;
     text-align: center;
 }
 
@@ -90,41 +93,36 @@ h3 {
     padding-left: 10px;
     text-align: left;
     box-sizing: border-box;
-    font-size: 200%;
+    font-size: 2rem;
 }
 
 /* .footer company */
 .company h3 {
     text-align: left;
     margin: 0 0 20px;
-    font-size: 200%;
+    font-size: 2rem;
 
 }
 /* .four, 選ばれる４つの理由 */
-h4 {
-    font-size: 400%;
+body h4 {
+    font-size: 4rem;
     text-align: center;
     margin: 0 20px;
-    text-align-last: justify; 
 }
 
 /* .four harf */
-h6 {
-    font-size: 180%;
+body h6 {
+    font-size: 1.5rem;
     text-align: center;
-    padding-top: 20px;
 }
 
 /* coner系：大文字と小文字の上下セットみだし */
 .coner {
-    align-items: center;
     margin-bottom: 50px;
 }
 
 .coner_h2 {
     margin: 0 auto;
-    width: 100%;
-    align-items: center;
 }
 
 
@@ -136,10 +134,7 @@ h6 {
 /* ヘッダー部分 */
 .head {
     display: flex;
-    /* width: 100%; */
     height: 100px;
-    /* デバッグ用で色付け */
-    /* background-color: aquamarine; */
     justify-content: space-between;
     margin: 0 5%;
 }
@@ -160,7 +155,6 @@ h6 {
     align-items: center;
     list-style: none;
     margin-right: 0;
-    width: 60%;
 }
 
 /* ヘッドクラスのaタグ設定 */
@@ -208,12 +202,13 @@ h6 {
 .toptext {
     width: 90%;
     text-align: center;
-    margin: 40px 5% 0;
+    margin: 40px auto 0;
 
 }
 
 
 /* ここだけ強調 */
+/* 見出しの中で強調したいのでここは%で文字調整 */
 .b-blow {
     font-weight: bold;
     font-size: 130%;
@@ -223,8 +218,6 @@ h6 {
 /* 行間を調整。間に2文字分が入る */
 .toptext p {
     line-height: 300%;
-    width: 100%;
-    margin: 0;
 }
 
 /* ----------------------------------
@@ -234,35 +227,26 @@ ABOUT */
 .box {
     position: relative;
     margin: 0;
-    /* 小要素のabsolute分高さ調整 */
-    height: 1650px;
     width: 100%;
+    /* flexにすることで高さを自動調節させる */
+    display: flex;
 }
 
 /* 背景画像を固定する */
 .back_img1 {
     position: absolute;
     width: 100%;
-    
-}
-/* レスポンシブ用 */
-.back_img2 {
-    display: none;
-}
-
-/* レスポンシブ用 */
-.back_img3 {
-    display: none;
+    height: 115%;
+    top: 0;
+    bottom: 0;
 }
 
 /* 背景の上に重なるように入力欄の要素作成 */
 .textarea {
-    position:absolute;
-    text-align: center;
-    top: 50px;
-    align-items: center;
-    margin: 200px 5% auto;
-    width: 90%;
+    margin: 15% 5% auto;
+    /* 背景画像よりも上に来るように設定 */
+    z-index: 200;
+
 }
 
 /* 見だし・左テキスト右画像のセット */
@@ -270,6 +254,7 @@ ABOUT */
     margin-bottom: 30px;
 }
 
+/* テキストと画像のセット。スマホでflex解除する */
 .textarea_1_1 {
     position: relative;
     display: flex;
@@ -286,10 +271,10 @@ ABOUT */
 .img_samp {
     position: absolute;
     left: 55%;
-    display: block;
     width: 45%;
 }
 
+/* 上下で幅の比率が異なっている */
 .area1_p2 {
     width: 50%;
     line-height: 300%;
@@ -302,32 +287,40 @@ ABOUT */
 
 /* ４つの理由部分の枠 */
 .four {
-    margin: 250px 5% 0;
+    margin: 20% auto 0;
     width: 90%;
 }
 
+/* 「b-blow」を強調と書体変更をする */
 .four_blow {
     font-size: 130%;
     font-weight: bold;
     font-family: serif;
 }
 
+/* ４を強調 */
 .span_4 {
     font-size: 130%;
 }
 
 
+/* 01~04までのセット。flexで高さ制御 */
 .pair {
     position: relative;
     width: 100%;
     display: flex;
-    margin-top: 50px;
+    /* 中央に少しスペースを作る */
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
+/* 高さ調節のためにflex使用 */
 .harf {
     position: relative;
-    width: 48%;
+    width: 49%;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* 要件通りの上下調整できませんでした。 */
@@ -335,20 +328,26 @@ ABOUT */
     text-align: center;
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 15%;
 }
 
+/* アイコンと重ねる */
 .point {
     float: left;
-    position: absolute;
-    top: 50% ;
     left: 0;
-    font-size: 250%;
     display: flex;
-    width: 100%;
-    height: 100%;
+    box-sizing: border-box;
+    padding-top: 10%;
+    padding-left: 5%;
+
 }
 
+.point p {
+    font-size: 2.5rem;
+
+}
+
+/* 付番 */
 .num {
     margin-right: 10px;
     margin-left: 10px;
@@ -357,10 +356,8 @@ ABOUT */
     font-variant-numeric: slashed-zero;
 }
 
-.reason {
-    text-align: center;
-}
-
+/* アイコンを配置するための箱
+pointと重ねるためにabsolute */
 .icon_base {
     float: right;
     width: 100%;
@@ -368,6 +365,7 @@ ABOUT */
     height: 100%;
     align-items: center;
     text-align: right;
+    margin-bottom: 5%;
 }
 
 .icon {
@@ -378,6 +376,8 @@ ABOUT */
     
 }
 
+/* 画像のサイズの差異でうまく配置できなかったので
+個別にクラスを作りました。 */
 .kutu {
     top: 25%;
     position: relative;
@@ -388,27 +388,41 @@ ABOUT */
 
 }
 
+/* 一定の高さを超えると文字量によって
+動的に高さが変化するように擬似クラス使用 */
 .reason_text {
     text-align: left;
     line-height: 300%;
-    margin-top: 60px;
+    margin-top: 10%;
     margin-bottom: 10px;
-    height: 200px;
+    display: flex;
+    font-size: 1.1rem;
+
 }
 
+.reason_text::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    padding-bottom: 40%;
+}
+
+/* 見出しと円グラフのセット */
 .survey {
     width: 90%;
     margin: 20px auto;
 }
 
+/* グラフ。親クラスの横幅に合わせる */
 .img_per {
     margin: auto;
     width: 100%;
 }
 
+/* 見出しの位置調整 */
 .h6_under {
     position: absolute;
-    /* top: 100px; */
     margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
@@ -419,125 +433,132 @@ ABOUT */
 /* --------------------------------- */
 /* CUSTOMER REVIEWS */
 
-/* レスポンシブ用 */
-.back_img4 {
-    display: none;
-}
 
 /* 背景に画像を設定するための土台部分 */
 .box2 {
     position: relative;
     margin: 0;
-    /* 小要素のabsolute分高さ調整 */
-    height: 1650px;
     width: 100%;
+    display: flex;
 }
 
 /* 要素を入れるエリア */
 .textarea2 {
-    position:absolute;
-    text-align: center;
-    align-items: center;
     margin: 280px 5% auto;
     width: 90%;
+    z-index: 200;
+
 }
  
+/* 画像・見出し・テキストのセット */
 .reviews {
-    padding-top: 70px;
-    position: relative;
     width: 100%;
-    height: 300px;
-    padding-bottom: 30px;
-}
-
-.review {
-    position: absolute;
-    left: 0;
-    width: 60%;
-    z-index: 200;
-    /* display: inline-block; */
-}
-
-/* ４つ目だけ比率変更 */
-.review_4 {
-    position: absolute;
-    left: 0;
-    width:70%;
-    z-index: 200;
+    height: 25%;
+    margin-bottom: 5%;
 }
 
 .reviews p {
-    text-align: left;
     line-height: 250%;
-    /* font-size: 120%; */
+    font-size: 1.1rem;
 }
 
+/* 画像を右寄せかつ、テキストを重ねる領域指定 */
 .img_rev {
-    position: absolute;
+    float: right;
     right: 0;
-    z-index: 100;
     width: 60%;
+    shape-outside: polygon(40% 0%, 100% 0%,100% 100%,30% 100%,30% 70%,30% 25%,40% 25%);
+
+}
+
+.img_rev4 {
+    float: right;
+    right: 0;
+    width: 60%;
+    shape-outside: polygon(40% 0%, 100% 0%,100% 100%,45% 100%,45% 70%,45% 50%,45% 25%);
+
+
 }
 /* ---------------------------- */
 
 /* PRODUCTS */
 
 .products {
-    margin-top: 550px;
-    /* height: 100px; */
+    margin-top: 20%;
     margin-left: 5%;
     margin-right: 5%;
 
 }
 
+/* flexで高さ自動調整 */
 .goods {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
 
+/* 中央にスペースを作れるように幅調整 */
 .goods_harf {
-    width: 43%;
+    width: 45%;
 }
 
-.goods_det {
-    height: 400px;
-}
+/* 親クラスよりも一回り小さく設定 */
 .img_goods {
-    width: 100%;
+    width: 90%;
+    margin: 0 5%;
 }
 
+/* b-blowの強調 */
 .goods_b {
     margin: 0 30px 0 auto;
     font-size: 130%;
 }
+
+/* 親クラスと同じ横幅 */
 .kakaku {
     text-align: center;
-    /* 小要素を親からはみ出させる */
-    margin: 0 calc(50% - 50vw) 20px;
-    width: 100vw;
+    margin: 5% 0;
 }
 
+/* 文字サイズ調整 */
 .goods p {
-    line-height: 200%;
+    font-size: 1.1rem;
 }
 
+/* 文字を入れる箱の設定 */
+.det {
+    line-height: 200%;
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* 枠線とボックス内の文字感覚で中央配置 */
 .online {
-    margin-top: 30px;
+    margin: 30px 5% 0;
     text-align: center;
     border: solid 1px black;
     height: 80px;
-    width: 100%;
+    width: 90%;
     line-height: 80px;
-    font-size: 200%;
+    font-size: 2rem;
 }
 
+/* カーソルが上に乗ると色が変わる */
 .online a:hover {
     background-color: black;
     color: white;
     transition: 1s;
 }
 
+/* リンクによるk変色や下線の修正 */
+.products a {
+    text-decoration: none;
+    color: black;
+    display: block;
+} 
+
+
+/* 定期配送の外部リンクを作る場合はこちら */
 /* .teiki {
     margin-top: 30px;
     margin-bottom: 100px;
@@ -557,12 +578,7 @@ ABOUT */
     transition: 1s;
 } */
 
-.products a {
-    text-decoration: none;
-    color: black;
-    display: block;
-} 
-
+/* 定期配送外部リンクのホバー設定 */
 /* .teiki a:hover {
     background-color: black;
     color: yellow;
@@ -576,100 +592,99 @@ ABOUT */
 .box3 {
     position: relative;
     margin: 0;
-    /* 小要素のabsolute分高さ調整 */
-    height: 1910px;
     width: 100%;
+    display: flex;
 }
 
 /* 背景画像を固定する */
 .back_img5 {
     position: absolute;
     width: 100%;
-    
+    height: 120%;
 }
 
-.back_img6 {
-    display: none;
-}
+/* 背景画像の上に重ねるゾーン */
 .teiki_form {
+    position: relative;
     width: 90%;
-    margin: 0 5%;
-    top: 400px;
-    position: absolute;
+    margin: 20% 5% 0;
 }
 
+/* フォーム領域 */
 .text {
+    position: relative;
     margin-top: 50px;
-    font-size: 200%;
+    font-size: 2.5rem;
 }
 
+/* サイズ調整 */
 .teiki_form h1 {
-    font-size: 300%;
-}
-/* 
-.teiki_form p {
-    font-size: 200%;
-}
- */
+    font-size: 3rem;
+} 
+
+/* inputタグ１ */
 .tag1 {
-    width: 60%;
-    font-size: 140%;
-    
+    width: 70%;
+    font-size: 2.5rem;
+    margin-bottom: 3%;
 }
 
+/* タグ２ */
 .tag2 {
     width: 80%;
-    font-size: 140%;
-
+    font-size: 2.5rem;
+    margin-bottom: 3%;
 }
 
+/* タグ３ */
 .tag3 {
     width: 30%;
-    font-size: 140%;
-
+    font-size: 2.5rem;
+    margin-bottom: 3%;
 }
 /* -----------------------------
 FAQ */
 
+/* faqの土台部分 */
 .faq {
     width: 90%;
     margin: 30px 5%;
 }
 
+/* faqの見出しセット部分 */
 .coner_faq {
-    align-items: center;
     margin-bottom: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
+/* 見出しの強調部分 */
 .faq_h1 {
     font-size: 200%;
 }
 
-.coner_h2 {
-    margin: 0 auto;
-    width: 100%;
-    align-items: center;
-}
+/* 見出し３とテキストの欄 */
 .qaset {
     margin-bottom: 40px;
 }
 
+/* 行間調整 */
 .qaset p {
     line-height: 200%;
 }
 /* ------------------------------
 news */
 
+/* ニュースサイトアイコン配置の土台 幅調整*/
 .news {
-    margin: 200px 10%;
-    width: 80%;
+    margin: 200px auto;
+    width: 85%;
 }
 
+/* 横並びにして両端均等揃え */
 .news_row1 {
     display: flex;
     justify-content: space-between;
-    position: relative;
-    width: 100%;
     margin-bottom: 10px;
 } 
 
@@ -687,24 +702,27 @@ news */
     opacity: 0.7;
 }
 
+/* 大きさ調整とブロック要素にしてmarginを効かせて中央よせ */
 .img_news {
     width: 80%;
     height: 100%;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto;
+    display: block;
+
 }
 
 /* --------------------------------
 フッター */
 
+/* フッターの背景色、中身を横並べ
+SNSアイコンの位置を絶対指定しているのでrelativeにする */
 .footer {
-    /* width: 90%;
-    margin: 20px 50px; */
     background-color: #eee;
     display: flex;
     position: relative;
 }
 
+/* 左側ゾーン、文字左寄せ */
 .company {
     text-align: left;
     margin-top: 30px;
@@ -712,14 +730,17 @@ news */
     margin-bottom: 20px;
 }
 
+/* 販売元とY＆U〜の間 */
 .company_0 {
     margin-right: 30px;
 }
 
+/* 行間設定 */
 .company p {
     line-height: 200%;
 }
 
+/* アイコン配置の絶対指定、右側少し隙間、横並べ */
 .sns_0 {
     position: absolute;
     right: 5%;
@@ -727,6 +748,7 @@ news */
     display: flex;
 }
 
+/* Twitterアイコンのエリア */
 .sns1 {
     display: flex;
     margin-right: 10px;
@@ -735,7 +757,7 @@ news */
     color: white;
     border: solid 1px #1DA1F2;
     /* align-items: center;    */
-    font-size: 150%;
+    font-size: 1.5rem;
 }
 
 /* 少し浮いて色が薄くなる */
@@ -744,18 +766,22 @@ news */
     opacity: 0.7;
 }
 
+/* aの効果消去 */
 .sns_0 a {
     text-decoration: none;
 }
 
+/* margin調整(twitter文字) */
 .sns1 p {
     margin: 5px 20px 5px 10px;
 }
 
+/* 左隙間(twitterアイコン) */
 .sns1 img {
     margin-left: 10px;
 }
 
+/* インスタ側 */
 .sns2 {
     display: flex;
     background-color: black;
@@ -763,14 +789,16 @@ news */
     color: white; 
     align-items: center; 
     border: solid 1px black;
-    font-size: 150%;
+    font-size: 1.5rem;
 }
 
+/* インスタ浮かせ */
 .sns2:hover {
     transform: translateY(-2px);
     opacity: 0.7;
 }
 
+/* インスタ文字margin */
 .sns2 p {
     margin: 5px 10px;
 }
